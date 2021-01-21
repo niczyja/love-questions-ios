@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,89 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Love_Questions" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Love Questions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Tb-AH-FWl">
+                                <rect key="frame" x="78.5" y="35" width="218.5" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="154.5" id="963-yw-iiG"/>
+                                    <constraint firstAttribute="height" constant="45" id="PxB-a7-fHl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="33"/>
+                                <color key="textColor" red="0.73333333333333328" green="0.098039215686274508" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yB3-s3-tfo">
+                                <rect key="frame" x="62.5" y="135" width="250" height="397"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSg-zV-50R">
+                                        <rect key="frame" x="15" y="15" width="220" height="367"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.93333333333333335" green="0.42352941176470588" blue="0.50588235294117645" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="MSg-zV-50R" firstAttribute="top" secondItem="yB3-s3-tfo" secondAttribute="top" constant="15" id="2yV-j8-6dA"/>
+                                    <constraint firstAttribute="trailing" secondItem="MSg-zV-50R" secondAttribute="trailing" constant="15" id="DnJ-MO-Lgt"/>
+                                    <constraint firstItem="MSg-zV-50R" firstAttribute="leading" secondItem="yB3-s3-tfo" secondAttribute="leading" constant="15" id="Gs4-EE-xSH"/>
+                                    <constraint firstItem="MSg-zV-50R" firstAttribute="centerY" secondItem="yB3-s3-tfo" secondAttribute="centerY" id="ICW-OX-4hN"/>
+                                    <constraint firstAttribute="bottom" secondItem="MSg-zV-50R" secondAttribute="bottom" constant="15" id="S9F-Wx-vpY"/>
+                                    <constraint firstItem="MSg-zV-50R" firstAttribute="centerX" secondItem="yB3-s3-tfo" secondAttribute="centerX" id="qJu-WH-33W"/>
+                                    <constraint firstAttribute="width" constant="250" id="tES-q3-aqy"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="OYG-fj-ysI" appends="YES" id="wzz-KS-ldC"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="khA-6I-mwK">
+                                <rect key="frame" x="112.5" y="587" width="150" height="31"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Next question">
+                                    <color key="titleColor" red="0.46666666666666667" green="0.48627450980392156" blue="0.6588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showNextQuestion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vx1-dY-wsQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.94117647058823528" green="0.5725490196078431" blue="0.6470588235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5Tb-AH-FWl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Axp-4D-P4j"/>
+                            <constraint firstItem="yB3-s3-tfo" firstAttribute="top" secondItem="5Tb-AH-FWl" secondAttribute="bottom" constant="55" id="Igx-9g-fav"/>
+                            <constraint firstItem="yB3-s3-tfo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Lmp-c3-ggF"/>
+                            <constraint firstItem="khA-6I-mwK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MNm-5B-Q8h"/>
+                            <constraint firstItem="5Tb-AH-FWl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="PcZ-Gs-KcX"/>
+                            <constraint firstItem="khA-6I-mwK" firstAttribute="top" secondItem="yB3-s3-tfo" secondAttribute="bottom" constant="55" id="V16-Ar-s5a"/>
+                            <constraint firstItem="khA-6I-mwK" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="bIS-mc-OWO"/>
+                            <constraint firstItem="khA-6I-mwK" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="gIE-Wm-WHt"/>
+                            <constraint firstItem="yB3-s3-tfo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rn2-lM-eDN"/>
+                            <constraint firstItem="khA-6I-mwK" firstAttribute="top" secondItem="yB3-s3-tfo" secondAttribute="bottom" constant="55" id="tVX-Jx-17y"/>
+                        </constraints>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="mainTitle" destination="5Tb-AH-FWl" id="BU4-3a-UIA"/>
+                        <outlet property="nextQuestionButton" destination="khA-6I-mwK" id="9wW-S4-mIc"/>
+                        <outlet property="questionText" destination="MSg-zV-50R" id="LLV-OP-ssd"/>
+                        <outlet property="questionView" destination="yB3-s3-tfo" id="OZa-69-2g5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="OYG-fj-ysI">
+                    <connections>
+                        <action selector="showNextQuestion:" destination="BYZ-38-t0r" id="6M4-Qi-6fT"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="-194.40000000000001" y="87.706146926536732"/>
         </scene>
     </scenes>
 </document>

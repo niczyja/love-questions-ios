@@ -13,6 +13,10 @@
 		522891DA25B35C07005731F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 522891D825B35C07005731F0 /* Main.storyboard */; };
 		522891DC25B35C08005731F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 522891DB25B35C08005731F0 /* Assets.xcassets */; };
 		522891DF25B35C08005731F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 522891DD25B35C08005731F0 /* LaunchScreen.storyboard */; };
+		5288A57825B4DD58009B5E52 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5288A57725B4DD58009B5E52 /* Question.swift */; };
+		5288A57B25B4E19E009B5E52 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 5288A57A25B4E19E009B5E52 /* data.json */; };
+		5288A57E25B4E53E009B5E52 /* QuestionsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5288A57D25B4E53E009B5E52 /* QuestionsSet.swift */; };
+		5288A58125B4F7C5009B5E52 /* JSONDataReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5288A58025B4F7C5009B5E52 /* JSONDataReader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		522891DB25B35C08005731F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		522891DE25B35C08005731F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		522891E025B35C08005731F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5288A57725B4DD58009B5E52 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		5288A57A25B4E19E009B5E52 /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		5288A57D25B4E53E009B5E52 /* QuestionsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsSet.swift; sourceTree = "<group>"; };
+		5288A58025B4F7C5009B5E52 /* JSONDataReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDataReader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,10 @@
 				522891DB25B35C08005731F0 /* Assets.xcassets */,
 				522891DD25B35C08005731F0 /* LaunchScreen.storyboard */,
 				522891E025B35C08005731F0 /* Info.plist */,
+				5288A57725B4DD58009B5E52 /* Question.swift */,
+				5288A57D25B4E53E009B5E52 /* QuestionsSet.swift */,
+				5288A58025B4F7C5009B5E52 /* JSONDataReader.swift */,
+				5288A57A25B4E19E009B5E52 /* data.json */,
 			);
 			path = "Love Questions";
 			sourceTree = "<group>";
@@ -127,6 +139,7 @@
 				522891DF25B35C08005731F0 /* LaunchScreen.storyboard in Resources */,
 				522891DC25B35C08005731F0 /* Assets.xcassets in Resources */,
 				522891DA25B35C07005731F0 /* Main.storyboard in Resources */,
+				5288A57B25B4E19E009B5E52 /* data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +150,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5288A58125B4F7C5009B5E52 /* JSONDataReader.swift in Sources */,
 				522891D725B35C07005731F0 /* ViewController.swift in Sources */,
+				5288A57825B4DD58009B5E52 /* Question.swift in Sources */,
 				522891D325B35C07005731F0 /* AppDelegate.swift in Sources */,
+				5288A57E25B4E53E009B5E52 /* QuestionsSet.swift in Sources */,
 				522891D525B35C07005731F0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,6 +304,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Love Questions/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -295,7 +312,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "pl.niczyja.Love-Questions";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -306,6 +323,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Love Questions/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -313,7 +331,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "pl.niczyja.Love-Questions";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
