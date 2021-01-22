@@ -7,30 +7,22 @@
 
 import Foundation
 
-class Question {
+struct Question {
     
-    //MARK: Properties
-    var number: Int
-    var text: String
-    
-    //MARK: Initialization
-    init(withNumber number: Int, text: String) {
-        self.number = number
-        self.text = text
-    }
-
+    let number: Int
+    let text: String
 }
 
-//MARK: Hashable
+extension Question: Codable {
+    
+}
 
 extension Question: Hashable {
 
     public func hash(into hasher: inout Hasher) {
-        hasher.combine(ObjectIdentifier(self))
+        hasher.combine(text)
     }
 }
-
-//MARK: Equatable
 
 extension Question: Equatable {
     
