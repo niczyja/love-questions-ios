@@ -14,6 +14,7 @@ class QuestionsSetViewController: UIViewController {
     @IBOutlet weak var mainTitle: UILabel!
     @IBOutlet weak var questionView: UIView!
     @IBOutlet weak var questionText: UILabel!
+    @IBOutlet weak var questionNumber: UILabel!
     @IBOutlet weak var nextQuestionButton: UIButton!
     
     var questionsSet: QuestionsSet?
@@ -40,10 +41,13 @@ class QuestionsSetViewController: UIViewController {
     private func updateQuestionView() {
         if self.questionsSet == nil {
             questionText.text = "No set of questions"
+            questionNumber.text = "?"
         } else if self.currentQuestion == nil {
             questionText.text = "No question"
+            questionNumber.text = "?"
         } else {
             questionText.text = self.currentQuestion!.text
+            questionNumber.text = "#\(self.currentQuestion!.number)"
         }
     }
 

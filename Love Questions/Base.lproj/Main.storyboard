@@ -29,8 +29,14 @@
                                 <rect key="frame" x="62.5" y="135" width="250" height="397"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSg-zV-50R">
-                                        <rect key="frame" x="15" y="15" width="220" height="367"/>
+                                        <rect key="frame" x="91" y="15" width="68.5" height="367"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4QF-UT-Ak3">
+                                        <rect key="frame" x="15" y="15" width="39" height="42"/>
+                                        <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="33"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -39,10 +45,14 @@
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="MSg-zV-50R" firstAttribute="top" secondItem="yB3-s3-tfo" secondAttribute="top" constant="15" id="2yV-j8-6dA"/>
-                                    <constraint firstAttribute="trailing" secondItem="MSg-zV-50R" secondAttribute="trailing" constant="15" id="DnJ-MO-Lgt"/>
-                                    <constraint firstItem="MSg-zV-50R" firstAttribute="leading" secondItem="yB3-s3-tfo" secondAttribute="leading" constant="15" id="Gs4-EE-xSH"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4QF-UT-Ak3" secondAttribute="trailing" constant="15" id="4d7-cv-eJJ"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="4QF-UT-Ak3" secondAttribute="bottom" constant="15" id="56y-J2-PfY"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="MSg-zV-50R" secondAttribute="trailing" constant="15" id="DnJ-MO-Lgt"/>
+                                    <constraint firstItem="MSg-zV-50R" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="yB3-s3-tfo" secondAttribute="leading" constant="15" id="Gs4-EE-xSH"/>
                                     <constraint firstItem="MSg-zV-50R" firstAttribute="centerY" secondItem="yB3-s3-tfo" secondAttribute="centerY" id="ICW-OX-4hN"/>
+                                    <constraint firstItem="4QF-UT-Ak3" firstAttribute="top" secondItem="yB3-s3-tfo" secondAttribute="top" constant="15" id="Oxw-v7-nuz"/>
                                     <constraint firstAttribute="bottom" secondItem="MSg-zV-50R" secondAttribute="bottom" constant="15" id="S9F-Wx-vpY"/>
+                                    <constraint firstItem="4QF-UT-Ak3" firstAttribute="leading" secondItem="yB3-s3-tfo" secondAttribute="leading" constant="15" id="mbQ-sS-lmR"/>
                                     <constraint firstItem="MSg-zV-50R" firstAttribute="centerX" secondItem="yB3-s3-tfo" secondAttribute="centerX" id="qJu-WH-33W"/>
                                     <constraint firstAttribute="width" constant="250" id="tES-q3-aqy"/>
                                 </constraints>
@@ -78,6 +88,7 @@
                     <connections>
                         <outlet property="mainTitle" destination="5Tb-AH-FWl" id="BU4-3a-UIA"/>
                         <outlet property="nextQuestionButton" destination="khA-6I-mwK" id="9wW-S4-mIc"/>
+                        <outlet property="questionNumber" destination="4QF-UT-Ak3" id="Jg2-wV-YNU"/>
                         <outlet property="questionText" destination="MSg-zV-50R" id="LLV-OP-ssd"/>
                         <outlet property="questionView" destination="yB3-s3-tfo" id="OZa-69-2g5"/>
                     </connections>
