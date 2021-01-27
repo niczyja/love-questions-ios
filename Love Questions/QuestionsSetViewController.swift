@@ -8,13 +8,21 @@
 import Foundation
 import UIKit
 
-class ViewController: UIViewController {
+class QuestionsSetViewController: UIViewController {
 
     //MARK: Properties
     @IBOutlet weak var mainTitle: UILabel!
     @IBOutlet weak var questionView: UIView!
     @IBOutlet weak var questionText: UILabel!
     @IBOutlet weak var nextQuestionButton: UIButton!
+    
+    var questionsSet: QuestionsSet?
+    var currentQuestion: Question?
+    
+    public func setup(with set: QuestionsSet?) {
+        self.questionsSet = set
+        self.currentQuestion = self.questionsSet?.nextQuestion()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,17 +32,24 @@ class ViewController: UIViewController {
         questionView.layer.shadowOffset = .zero
         questionView.layer.cornerRadius = 8
         questionView.layer.shadowRadius = 8
-        
-//        if (self.questionsSet) != nil {
-//            questionText.text = self.questionsSet!.questions.first?.text
-//        } else {
-//            questionText.text = "Eror"
-//        }
+
+        self.updateQuestionView()
     }
 
     //MARK: Actions
     @IBAction func showNextQuestion(_ sender: Any) {
-//        questionText.text = self.questionsSet?.nextQuestion().text
+        self.currentQuestion = self.questionsSet?.nextQuestion()
+        self.updateQuestionView()
+    }
+
+    private func updateQuestionView() {
+        if self.questionsSet == nil {
+            questionText.text = "No set of questions"
+        } else if self.currentQuestion == nil {
+            questionText.text = "No question"
+        } else {
+            questionText.text = self.currentQuestion!.text
+        }
     }
 
 }

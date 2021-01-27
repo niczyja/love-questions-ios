@@ -11,6 +11,23 @@ struct QuestionsSet {
     
     let name: String
     let questions: Set<Question>
+    
+    private var sortedQuestions: [Question]?
+    private var currentIndex: Int?
+    
+    mutating func nextQuestion() -> Question {
+        if sortedQuestions == nil {
+            sortedQuestions = questions.sorted()
+        }
+        
+        if currentIndex == nil || currentIndex == sortedQuestions!.endIndex - 1 {
+            currentIndex = sortedQuestions!.startIndex
+        } else {
+            currentIndex = sortedQuestions!.index(after: currentIndex!)
+        }
+        
+        return sortedQuestions![currentIndex!]
+    }
 }
 
 extension QuestionsSet: Codable {

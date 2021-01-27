@@ -30,3 +30,10 @@ extension Question: Equatable {
         return lhs.text == rhs.text
     }
 }
+
+extension Question: Comparable {
+    
+    static func < (lhs: Question, rhs: Question) -> Bool {
+        return lhs.number < rhs.number
+    }
+}
