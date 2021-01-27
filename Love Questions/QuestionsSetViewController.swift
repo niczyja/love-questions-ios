@@ -26,13 +26,8 @@ class QuestionsSetViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
-        questionView.layer.shadowColor = UIColor.black.cgColor
-        questionView.layer.shadowOpacity = 0.3
-        questionView.layer.shadowOffset = .zero
-        questionView.layer.cornerRadius = 8
-        questionView.layer.shadowRadius = 8
-
+        
+        self.setupQuestionView()
         self.updateQuestionView()
     }
 
@@ -52,5 +47,12 @@ class QuestionsSetViewController: UIViewController {
         }
     }
 
+    private func setupQuestionView() {
+        questionView.layer.shadowColor = UIColor.black.cgColor
+        questionView.layer.shadowOpacity = 0.3
+        questionView.layer.shadowOffset = .zero
+        questionView.layer.cornerRadius = 8
+        questionView.layer.shadowRadius = 8
+    }
 }
 
