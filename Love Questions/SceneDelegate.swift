@@ -19,8 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
 
         self.dataController = DataController()
-        let viewController = window!.rootViewController as! QuestionsSetViewController
-        viewController.setup(with: self.dataController.questionsSets?.first ?? nil)
+        let viewController = window!.rootViewController as! QuestionsSetTableViewController
+        viewController.setup(with: self.dataController.questionsSets)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

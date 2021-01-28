@@ -9,13 +9,11 @@ import Foundation
 
 class DataController {
     
-    var questionsSets: [QuestionsSet]?
+    var questionsSets = [QuestionsSet]()
     
-    init?() {
+    init() {
         if let localData = readLocalFile(withName: "data"), let decodedData = parse(jsonData: localData) {
             self.questionsSets = decodedData
-        } else {
-            return nil
         }
     }
     

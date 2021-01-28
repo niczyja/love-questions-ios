@@ -147,5 +147,225 @@
         "text": "Share a personal problem and ask your partner’s advice on how he or she might handle it. Also, as your partner to reflect back to you how you seem to be feeling about the problem you have chosen."
       }
     ]
+  },
+  {
+    "name": "Dreams and future",
+    "questions": [
+      {
+        "number": 1,
+        "text": "What are some of the highest-valued things on your bucket list?"
+      },
+      {
+        "number": 2,
+        "text": "Do you want kids? If so, what are some of the values you want to instill in them?"
+      },
+      {
+        "number": 3,
+        "text": "Where is a place you’ve always wanted to travel?"
+      },
+      {
+        "number": 4,
+        "text": "What is something you want to do together that we haven’t?"
+      },
+      {
+        "number": 5,
+        "text": "Have you ever wanted to move anywhere else?"
+      },
+      {
+        "number": 6,
+        "text": "If you could gain one quality or ability, what would it be?"
+      },
+      {
+        "number": 7,
+        "text": "How do you see the future individually and collectively as a couple?"
+      },
+      {
+        "number": 8,
+        "text": "What things do you look forward to each day?"
+      },
+      {
+        "number": 9,
+        "text": "How do you foresee us resolving our most persistent problems?"
+      },
+      {
+        "number": 10,
+        "text": "What are your goals for this relationship?"
+      },
+      {
+        "number": 11,
+        "text": "What are you hoping to learn in the coming year?"
+      },
+      {
+        "number": 12,
+        "text": "Is there anything you’re hesitant to accomplish that I can help you with?"
+      }
+    ]
+  },
+  {
+    "name": "Favorites",
+    "questions": [
+      {
+        "number": 1,
+        "text": "What is your favorite film?"
+      },
+      {
+        "number": 2,
+        "text": "What was your favorite class?"
+      },
+      {
+        "number": 3,
+        "text": "What is your favorite book?"
+      },
+      {
+        "number": 4,
+        "text": "What is your favorite childhood memory?"
+      },
+      {
+        "number": 5,
+        "text": "What is your favorite memory of our relationship?"
+      },
+      {
+        "number": 6,
+        "text": "What is your favorite thing about yourself?"
+      },
+      {
+        "number": 7,
+        "text": "What is your favorite thing about me?"
+      },
+      {
+        "number": 8,
+        "text": "What is your favorite place?"
+      },
+      {
+        "number": 9,
+        "text": "What was your favorite part about our first kiss?"
+      },
+      {
+        "number": 10,
+        "text": "What was your favorite date we’ve had?"
+      },
+      {
+        "number": 11,
+        "text": "What is your favorite TV sitcom?"
+      },
+      {
+        "number": 12,
+        "text": "What is your favorite karaoke song?"
+      },
+      {
+        "number": 13,
+        "text": "What is your favorite way to communicate?"
+      }
+    ]
+  },
+  {
+    "name": "Sex and Romance",
+    "questions": [
+      {
+        "number": 1,
+        "text": "What was your first sexual experience?"
+      },
+      {
+        "number": 2,
+        "text": "When was the first time you fell in love?"
+      },
+      {
+        "number": 3,
+        "text": "What are the things you value most from the beginning of our relationship?"
+      },
+      {
+        "number": 4,
+        "text": "When did you first know you wanted to be in a relationship with me?"
+      },
+      {
+        "number": 5,
+        "text": "Are you satisfied with our chemistry and intimacy?"
+      },
+      {
+        "number": 6,
+        "text": "In which situations do you feel most secure in our relationship?"
+      },
+      {
+        "number": 7,
+        "text": "What makes you feel most loved?"
+      },
+      {
+        "number": 8,
+        "text": "What is your favorite meal to share for a date night?"
+      },
+      {
+        "number": 9,
+        "text": "What physical and emotional gestures do you appreciate most?"
+      },
+      {
+        "number": 10,
+        "text": "What song do you think of when you think of me?"
+      },
+      {
+        "number": 11,
+        "text": "What is the main thing that you think makes a relationship last?"
+      },
+      {
+        "number": 12,
+        "text": "What experiences and situations, whether yours or someone else’s, inspired your philosophy of love?"
+      }
+    ]
+  },
+  {
+    "name": "Personal",
+    "questions": [
+      {
+        "number": 1,
+        "text": "What is the extent of your religious ideology, if any?"
+      },
+      {
+        "number": 2,
+        "text": "Is there anything you would change about yourself?"
+      },
+      {
+        "number": 3,
+        "text": "What helped shape your current political stance and principles?"
+      },
+      {
+        "number": 4,
+        "text": "What are some of the things that you are most grateful for?"
+      },
+      {
+        "number": 5,
+        "text": "When was the last time you cried?"
+      },
+      {
+        "number": 6,
+        "text": "What does a perfect day look like to you?"
+      },
+      {
+        "number": 7,
+        "text": "Are there any people, from friends to relatives, you want to get closer to? Why?"
+      },
+      {
+        "number": 8,
+        "text": "Do you trust me?"
+      },
+      {
+        "number": 9,
+        "text": "Are there any conflicts that we’ve had in the past that you don’t feel are wholly resolved yet?"
+      },
+      {
+        "number": 10,
+        "text": "Which family member did you admire most when you were young?"
+      },
+      {
+        "number": 11,
+        "text": "What does a balanced relationship look like to you?"
+      },
+      {
+        "number": 12,
+        "text": "What is your idea of a healthy relationship?"
+      },
+      {
+        "number": 13,
+        "text": "Is there anything about me that you don’t currently know but want to?"
+      }
+    ]
   }
 ]
