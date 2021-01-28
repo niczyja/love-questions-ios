@@ -45,7 +45,7 @@ class QuestionsSetTableViewController: UITableViewController {
 
         let questionsSet = self.questionsSets[indexPath.row]
         cell.textLabel?.text = questionsSet.name
-        cell.detailTextLabel?.text = "\(questionsSet.questions.count) questions"
+        cell.detailTextLabel?.text = String(questionsSet.questions.count)
 
         return cell
     }
