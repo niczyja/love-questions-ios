@@ -11,7 +11,6 @@ import UIKit
 class QuestionsSetViewController: UIViewController {
 
     //MARK: Properties
-    @IBOutlet weak var mainTitle: UILabel!
     @IBOutlet weak var questionView: UIView!
     @IBOutlet weak var questionText: UILabel!
     @IBOutlet weak var questionNumber: UILabel!
@@ -28,7 +27,7 @@ class QuestionsSetViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.setupQuestionView()
+        self.navigationItem.title = self.questionsSet?.name
         self.updateQuestionView()
     }
 
@@ -49,14 +48,7 @@ class QuestionsSetViewController: UIViewController {
             questionText.text = self.currentQuestion!.text
             questionNumber.text = "#\(self.currentQuestion!.number)"
         }
-    }
-
-    private func setupQuestionView() {
-        questionView.layer.shadowColor = UIColor.black.cgColor
-        questionView.layer.shadowOpacity = 0.3
-        questionView.layer.shadowOffset = .zero
-        questionView.layer.cornerRadius = 8
-        questionView.layer.shadowRadius = 8
+        questionView.updateConstraints()
     }
 }
 
