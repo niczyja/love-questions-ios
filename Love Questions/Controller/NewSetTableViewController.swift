@@ -103,6 +103,8 @@ class NewSetTableViewController: UITableViewController {
         os_log("Created new questions set: \(self.questionsSet!.name)")
     }
 
+    //MARK: - Actions
+    
     @IBAction func cancel(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }

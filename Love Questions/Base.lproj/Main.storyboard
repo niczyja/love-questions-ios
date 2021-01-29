@@ -231,7 +231,11 @@
                                 <action selector="cancel:" destination="OCi-fF-yS0" id="FGv-Kf-avR"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="SQh-Tv-wOl"/>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="SQh-Tv-wOl">
+                            <connections>
+                                <segue destination="hfV-yv-VXZ" kind="unwind" unwindAction="unwindToQuestionsSetWithSender:" id="BVc-zu-5Mu"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="cancelButton" destination="g4S-td-iBS" id="xOU-PA-qld"/>
@@ -243,6 +247,7 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jym-Sm-2M1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="hfV-yv-VXZ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1488.8" y="-239.73013493253376"/>
         </scene>

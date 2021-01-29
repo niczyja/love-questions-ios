@@ -93,4 +93,15 @@ class QuestionsSetTableViewController: UITableViewController {
         }
     }
 
+    // MARK: - Actions
+    
+    @IBAction func unwindToQuestionsSet(sender: UIStoryboardSegue) {
+        if let source = sender.source as? NewSetTableViewController, let set = source.questionsSet {
+
+            let newIndexPath = IndexPath(row: questionsSets.count, section: 0)
+            questionsSets.append(set)
+            dataController.persistData(withSets: questionsSets)
+            tableView.insertRows(at: [newIndexPath], with: .automatic)
+        }
+    }
 }

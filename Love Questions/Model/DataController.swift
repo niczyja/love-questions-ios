@@ -9,29 +9,32 @@ import Foundation
 
 class DataController {
     
-    static let file = "data"
+    private let file = "LoveQuestionsData"
+    private let fileManager = FileManager()
+    
     var questionsSets = [QuestionsSet]()
     
     init() {
-        if let localData = readLocalFile(withName: DataController.file), let decodedData = parse(jsonData: localData) {
+        if let fileURL = url(forFileNamed: file), !fileManager.fileExists(atPath: fileURL.path) {
+            fileManager.createFile(atPath: fileURL.path, contents: "[]".data(using: .utf8), attributes: [FileAttributeKey.type: "json"])
+        }
+        
+        if let localData = readLocalFile(withName: file), let decodedData = parse(jsonData: localData) {
             self.questionsSets = decodedData
         }
     }
     
-    public func persistData() {
-        do {
-            let jsonData = try JSONEncoder().encode(self.questionsSets)
-            writeLocalFile(withName: DataController.file, data: jsonData)
-        } catch {
-            print(error)
+    public func persistData(withSets sets: [QuestionsSet]) {
+        if let encodedData = parse(sets: sets) {
+            writeLocalFile(withName: file, data: encodedData)
+            self.questionsSets = sets
         }
     }
     
     private func writeLocalFile(withName name: String, data: Data) {
         do {
-            if let bundlePath = Bundle.main.path(forResource: name, ofType: "json") {
-                let url = URL.init(fileURLWithPath: bundlePath)
-                try data.write(to: url, options: Data.WritingOptions.atomicWrite)
+            if let fileURL = url(forFileNamed: name) {
+                try data.write(to: fileURL)
             }
         } catch {
             print(error)
@@ -40,7 +43,7 @@ class DataController {
     
     private func readLocalFile(withName name: String) -> Data? {
         do {
-            if let bundlePath = Bundle.main.path(forResource: name, ofType: "json"), let jsonData = try String.init(contentsOfFile: bundlePath).data(using: .utf8) {
+            if let fileURL = url(forFileNamed: name), let jsonData = try String.init(contentsOf: fileURL).data(using: .utf8) {
                 return jsonData
             }
         } catch {
@@ -59,4 +62,22 @@ class DataController {
         
         return nil
     }
+    
+    private func parse(sets: [QuestionsSet]) -> Data? {
+        do {
+            return try JSONEncoder().encode(sets)
+        } catch {
+            print(error)
+        }
+        
+        return nil
+    }
+    
+    private func url(forFileNamed fileName: String) -> URL? {
+        guard let url = fileManager.urls(for: FileManager.SearchPathDirectory.documentDirectory, in: FileManager.SearchPathDomainMask.userDomainMask).first else {
+            return nil
+        }
+        return url.appendingPathComponent(fileName)
+    }
+
 }
