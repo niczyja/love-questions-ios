@@ -11,6 +11,11 @@ struct Question {
     
     let number: Int
     let text: String
+    
+    init(withNumber number: Int, text: String) {
+        self.number = number
+        self.text = text
+    }
 }
 
 extension Question: Codable {

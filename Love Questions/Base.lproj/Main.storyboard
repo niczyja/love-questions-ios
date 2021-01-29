@@ -50,7 +50,13 @@
                             <outlet property="delegate" destination="q6D-6l-eAa" id="czD-RG-Dnc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Questions Sets" id="eQw-EN-4kj"/>
+                    <navigationItem key="navigationItem" title="Questions Sets" id="eQw-EN-4kj">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Gq4-6F-9Wa">
+                            <connections>
+                                <segue destination="vRG-vs-Cak" kind="presentation" id="3xR-Zl-fwO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qfQ-Sp-0Dy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -59,6 +65,7 @@
         <!--Love Questions-->
         <scene sceneID="tne-QT-ifu">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="QuestionsSetViewController" customModule="Love_Questions" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -126,9 +133,8 @@
                         <outlet property="questionView" destination="yB3-s3-tfo" id="OZa-69-2g5"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="629.60000000000002" y="87.706146926536732"/>
+            <point key="canvasLocation" x="694" y="458"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oAQ-S1-dwN">
@@ -147,6 +153,116 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fRI-bm-5F5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-846" y="88"/>
+        </scene>
+        <!--Create new set-->
+        <scene sceneID="iA7-TA-GvP">
+            <objects>
+                <tableViewController id="OCi-fF-yS0" customClass="NewSetTableViewController" customModule="Love_Questions" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="dkj-Kc-GdM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Set" id="Cdz-XJ-JVF">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="TextFieldCell" id="AZj-gZ-81X">
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AZj-gZ-81X" id="VcI-9n-fEu">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AZS-ea-cXw">
+                                                    <rect key="frame" x="16" y="5" width="343" height="34"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="33" id="etd-3K-a2E"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="AZS-ea-cXw" secondAttribute="bottom" constant="5" id="fNk-OW-d2z"/>
+                                                <constraint firstItem="AZS-ea-cXw" firstAttribute="leading" secondItem="VcI-9n-fEu" secondAttribute="leading" constant="16" id="fhB-f9-YQb"/>
+                                                <constraint firstAttribute="trailing" secondItem="AZS-ea-cXw" secondAttribute="trailing" constant="16" id="mdY-4S-RVI"/>
+                                                <constraint firstItem="AZS-ea-cXw" firstAttribute="top" secondItem="VcI-9n-fEu" secondAttribute="top" constant="5" id="vxc-X9-Gv4"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Questions" footerTitle="Paste text separated by new lines to add multiple questions at once" id="tVY-Vs-BKl">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="TextFieldCell" id="ZSA-cd-6Mx">
+                                        <rect key="frame" x="0.0" y="162.5" width="375" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZSA-cd-6Mx" id="bji-aF-LVG">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type or paste questions" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kTb-wg-1eP">
+                                                    <rect key="frame" x="16" y="5" width="343" height="34"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="33" id="NoX-Xw-7Oj"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="kTb-wg-1eP" firstAttribute="leading" secondItem="bji-aF-LVG" secondAttribute="leading" constant="16" id="Cny-hA-h1U"/>
+                                                <constraint firstAttribute="trailing" secondItem="kTb-wg-1eP" secondAttribute="trailing" constant="16" id="fum-Sj-WwA"/>
+                                                <constraint firstAttribute="bottom" secondItem="kTb-wg-1eP" secondAttribute="bottom" constant="5" id="g58-EV-Nmd"/>
+                                                <constraint firstItem="kTb-wg-1eP" firstAttribute="top" secondItem="bji-aF-LVG" secondAttribute="top" constant="5" id="mcM-Xc-tkM"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="OCi-fF-yS0" id="YtU-Gk-jxA"/>
+                            <outlet property="delegate" destination="OCi-fF-yS0" id="pco-fm-eKl"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Create new set" id="lul-NV-IDI">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="g4S-td-iBS">
+                            <connections>
+                                <action selector="cancel:" destination="OCi-fF-yS0" id="FGv-Kf-avR"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="SQh-Tv-wOl"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cancelButton" destination="g4S-td-iBS" id="xOU-PA-qld"/>
+                        <outlet property="questionCell" destination="ZSA-cd-6Mx" id="z6N-pC-dUN"/>
+                        <outlet property="questionTextField" destination="kTb-wg-1eP" id="gaj-Y4-Id2"/>
+                        <outlet property="saveButton" destination="SQh-Tv-wOl" id="Urt-cz-Ioy"/>
+                        <outlet property="setNameCell" destination="AZj-gZ-81X" id="OMG-Za-ia9"/>
+                        <outlet property="setNameTextField" destination="AZS-ea-cXw" id="LjI-Xe-bge"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jym-Sm-2M1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1488.8" y="-239.73013493253376"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ppw-qV-H6f">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vRG-vs-Cak" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xNE-dJ-NZ0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="OCi-fF-yS0" kind="relationship" relationship="rootViewController" id="etm-Ds-iyG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qf8-5o-oeT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="694" y="-238"/>
         </scene>
     </scenes>
     <resources>

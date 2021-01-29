@@ -14,6 +14,7 @@
 		522891DC25B35C08005731F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 522891DB25B35C08005731F0 /* Assets.xcassets */; };
 		522891DF25B35C08005731F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 522891DD25B35C08005731F0 /* LaunchScreen.storyboard */; };
 		526F662225C2390800FB0E99 /* QuestionsSetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526F662125C2390800FB0E99 /* QuestionsSetTableViewController.swift */; };
+		526F662625C373FE00FB0E99 /* NewSetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526F662525C373FE00FB0E99 /* NewSetTableViewController.swift */; };
 		5288A57825B4DD58009B5E52 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5288A57725B4DD58009B5E52 /* Question.swift */; };
 		5288A57B25B4E19E009B5E52 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 5288A57A25B4E19E009B5E52 /* data.json */; };
 		5288A57E25B4E53E009B5E52 /* QuestionsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5288A57D25B4E53E009B5E52 /* QuestionsSet.swift */; };
@@ -30,6 +31,7 @@
 		522891DE25B35C08005731F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		522891E025B35C08005731F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		526F662125C2390800FB0E99 /* QuestionsSetTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsSetTableViewController.swift; sourceTree = "<group>"; };
+		526F662525C373FE00FB0E99 /* NewSetTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSetTableViewController.swift; sourceTree = "<group>"; };
 		5288A57725B4DD58009B5E52 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		5288A57A25B4E19E009B5E52 /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		5288A57D25B4E53E009B5E52 /* QuestionsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsSet.swift; sourceTree = "<group>"; };
@@ -66,18 +68,27 @@
 		522891D125B35C07005731F0 /* Love Questions */ = {
 			isa = PBXGroup;
 			children = (
+				526F662425C373DD00FB0E99 /* Controller */,
 				5288A58725BA36E8009B5E52 /* Model */,
 				522891D225B35C07005731F0 /* AppDelegate.swift */,
 				522891D425B35C07005731F0 /* SceneDelegate.swift */,
-				522891D625B35C07005731F0 /* QuestionsSetViewController.swift */,
 				522891D825B35C07005731F0 /* Main.storyboard */,
-				526F662125C2390800FB0E99 /* QuestionsSetTableViewController.swift */,
 				522891DB25B35C08005731F0 /* Assets.xcassets */,
 				522891DD25B35C08005731F0 /* LaunchScreen.storyboard */,
 				522891E025B35C08005731F0 /* Info.plist */,
 				5288A57A25B4E19E009B5E52 /* data.json */,
 			);
 			path = "Love Questions";
+			sourceTree = "<group>";
+		};
+		526F662425C373DD00FB0E99 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				522891D625B35C07005731F0 /* QuestionsSetViewController.swift */,
+				526F662125C2390800FB0E99 /* QuestionsSetTableViewController.swift */,
+				526F662525C373FE00FB0E99 /* NewSetTableViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		5288A58725BA36E8009B5E52 /* Model */ = {
@@ -168,6 +179,7 @@
 				522891D325B35C07005731F0 /* AppDelegate.swift in Sources */,
 				5288A57E25B4E53E009B5E52 /* QuestionsSet.swift in Sources */,
 				522891D525B35C07005731F0 /* SceneDelegate.swift in Sources */,
+				526F662625C373FE00FB0E99 /* NewSetTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

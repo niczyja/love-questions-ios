@@ -9,6 +9,7 @@ import UIKit
 
 class QuestionsSetTableViewController: UITableViewController {
 
+    static let cellIdentifier = "SetTableViewCell"
     var questionsSets = [QuestionsSet]()
     var dataController: DataController!
 
@@ -40,8 +41,7 @@ class QuestionsSetTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellIdentifier = "SetTableViewCell"
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: QuestionsSetTableViewController.cellIdentifier, for: indexPath)
 
         let questionsSet = self.questionsSets[indexPath.row]
         cell.textLabel?.text = questionsSet.name
